@@ -8,4 +8,117 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+}
+
+.app {
+  background-color: #010221;
+  color: #f1f1f1;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  transition: all 0.5s;
+}
+.app .heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.app .heading h1 {
+  font-size: 3rem;
+}
+.app .heading .input-container {
+  background-color: #0A7373;
+  border-radius: 8px;
+  height: 4.5rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  margin: 0.8rem;
+}
+.app .heading .input-container button {
+  border: none;
+  background-color: #EDAA25;
+  padding: 1.5rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.app .heading .input-container button:hover, .app .heading .input-container button:active {
+  background-color: #ed9625;
+}
+.app .heading .input-container input[type=text] {
+  outline: none;
+  border: none;
+  background: none;
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.2rem;
+  width: 80%;
+}
+.app .heading .input-container input[type=text]::-moz-placeholder {
+  color: #f1f1f1;
+  opacity: 0.5;
+}
+.app .heading .input-container input[type=text]::placeholder {
+  color: #f1f1f1;
+  opacity: 0.5;
+}
+
+.tasks-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-element {
+  background-color: #0A7373;
+  border-radius: 8px;
+  height: 4.5rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  margin: 0.8rem;
+  background-color: #085c5c;
+  width: 100%;
+  align-items: center;
+  box-shadow: none;
+}
+.task-element h2 {
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+.task-element button {
+  background: none;
+  border: none;
+  padding: 0.8rem;
+  margin: 0.5rem;
+}
+.task-element button .icon {
+  color: #fff;
+}
+.task-element button .icon:hover {
+  color: #EDAA25;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
