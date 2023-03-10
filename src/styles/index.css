@@ -105,9 +105,6 @@ body {
   padding: 0.8rem;
   margin: 0.5rem;
 }
-.task-element button .icon {
-  color: #fff;
-}
 .task-element button .icon:hover {
   color: #EDAA25;
   cursor: pointer;

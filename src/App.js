@@ -42,13 +42,13 @@ function App() {
               <input className={isEdited ? '' : 'hide'} type="text" value={task.text} onChange={handleInputNewText}/>                          
               <div className="buttons">
               <button className={isEdited ? '' : 'hide'} onClick={() => {dispatch(updateTaskName({id: task.id, text: newText})); setIsEdited(!isEdited);}}>
-                <SaveAltIcon fontSize="small" className="icon"/>
+                <SaveAltIcon fontSize="small" className="icon" sx={{color:"white"}}/>
               </button>
                 <button onClick={() => {dispatch(deleteTask({id: task.id})); }}>
-                  <DeleteIcon fontSize="small" className="icon"/>
+                  <DeleteIcon fontSize="small" className="icon" sx={{color:"white"}}/>
                 </button>
                 <button onClick={() => { setIsEdited(!isEdited) }}>
-                  <EditIcon fontSize="small" className="icon"/>
+                  <EditIcon fontSize="small" className="icon" sx={{color:"white"}}/>
                 </button>
               </div>
             </div>
