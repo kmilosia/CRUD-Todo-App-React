@@ -1,4 +1,5 @@
 @import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/500.css';
 .task-element {
   border-radius: 8px;
   height: 4.5rem;
@@ -11,9 +12,22 @@
   width: 100%;
   align-items: center;
 }
+.task-element input {
+  outline: none;
+  border: 3px solid #0A7373;
+  background: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: #f1f1f1;
+  font-size: 1rem;
+  padding-left: 0.8rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
 .task-element h2 {
   padding-left: 1rem;
   font-size: 1rem;
+  font-weight: 400;
 }
 .task-element button {
   background: none;

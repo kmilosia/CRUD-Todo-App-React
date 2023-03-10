@@ -1,14 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit"; 
-
+const initialState = {
+    count: 0,
+    value: [],
+    };
 export const taskSlice = createSlice({
     name: "tasks",
-    initialState: {value : [{id: 0, text: "text"},]},
+    initialState,
     reducers: {
         addTask: (state, action) => {
-            state.value.push(action.payload);
+            const task = {
+                id: action.payload.id,
+                text: action.payload.text,
+            }
+            state.value.push(task);
+            state.count += 1;
         },
         deleteTask: (state, action) => {
             state.value = state.value.filter((task) => task.id !== action.payload.id);
+            state.count -= 1;
         },
         updateTaskName: (state, action) => {
             state.value.map((task) => {
