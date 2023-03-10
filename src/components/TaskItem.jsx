@@ -1,20 +1,37 @@
 import React from 'react';
 import '../styles/taskItem.css';
+import { useState, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { deleteTask, updateTaskName } from "../features/Tasks";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import SaveAltIcon from '@mui/icons-material/SaveAlt';
 
-function TaskItem() {
-  return (
-    <div className='task-container'>
-      <div className="row">
-        <h2>Task text</h2>
-        <div className="buttons">
-            <button><DeleteIcon color='primary'/></button>
-            <button><EditIcon color='primary'/></button>
+function TaskItem(props) {
+    const dispatch = useDispatch();
+    const [newText, setNewText] = useState(props.task.text);
+    const [isEdited, setIsEdited] = useState(false);
+    const handleInputNewText = (event) => {
+        setNewText(event.target.value);
+      }
+
+    return(
+        <div className="task-element">
+          <h2 className={isEdited ? 'hide' : ''}>{props.task.text}</h2>
+          <input className={isEdited ? '' : 'hide'} type="text" value={newText} onChange={handleInputNewText}/>                          
+          <div className="buttons">
+          <button className={isEdited ? '' : 'hide'} onClick={() => {dispatch(updateTaskName({id: props.task.id, text: newText})); setIsEdited(!isEdited);}}>
+            <SaveAltIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+          </button>
+            <button onClick={() => {dispatch(deleteTask({id: props.task.id})); }}>
+              <DeleteIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+            </button>
+            <button onClick={() => { setIsEdited(!isEdited) }}>
+              <EditIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
-  )
+        )
 }
 
 export default TaskItem;

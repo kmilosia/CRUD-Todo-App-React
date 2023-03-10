@@ -2,24 +2,16 @@ import TaskItem from "./components/TaskItem";
 import './styles/index.css';
 import { useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addTask, deleteTask, updateTaskName } from "./features/Tasks";
+import { addTask } from "./features/Tasks";
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import SaveAltIcon from '@mui/icons-material/SaveAlt';
 
 function App() {
   const dispatch = useDispatch();
   const taskList = useSelector((state) => state.tasks.value);
   const [text, setText] = useState("");
-  const [newText, setNewText] = useState("");
-  const [isEdited, setIsEdited] = useState(false);
   const newTaskInput = useRef(null);
   const handleInputText = (event) => {
     setText(event.target.value);
-  }
-  const handleInputNewText = (event) => {
-    setNewText(event.target.value);
   }
   const handleAddButton = () => {
     dispatch(addTask({id: taskList[taskList.length -1].id + 1, text: text}));
@@ -36,23 +28,7 @@ function App() {
       </div>
       <div className="tasks-list">
         {taskList.map((task) => {
-          return(
-            <div className="task-element">
-              <h2 className={isEdited ? 'hide' : ''}>{task.text}</h2>
-              <input className={isEdited ? '' : 'hide'} type="text" value={task.text} onChange={handleInputNewText}/>                          
-              <div className="buttons">
-              <button className={isEdited ? '' : 'hide'} onClick={() => {dispatch(updateTaskName({id: task.id, text: newText})); setIsEdited(!isEdited);}}>
-                <SaveAltIcon fontSize="small" className="icon" sx={{color:"white"}}/>
-              </button>
-                <button onClick={() => {dispatch(deleteTask({id: task.id})); }}>
-                  <DeleteIcon fontSize="small" className="icon" sx={{color:"white"}}/>
-                </button>
-                <button onClick={() => { setIsEdited(!isEdited) }}>
-                  <EditIcon fontSize="small" className="icon" sx={{color:"white"}}/>
-                </button>
-              </div>
-            </div>
-            )
+          return <TaskItem task={task}/>
         })}
       </div>
     </div>

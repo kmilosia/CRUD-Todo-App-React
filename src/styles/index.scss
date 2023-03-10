@@ -1,16 +1,5 @@
 @import '@fontsource/roboto/300.css';
 @import './variables';
-@mixin card{
-        background-color: $secondaryBackground;
-        border-radius: 8px;
-        height: 4.5rem;
-        width: 60%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5rem;
-        padding-left: 1rem;
-        margin: 0.8rem;
-}
 
 *{
     margin: 0;
@@ -44,8 +33,15 @@ body{
     font-size: 3rem;
     }
     .input-container{
-        @include card;
-
+        background-color: $secondaryBackground;
+        border-radius: 8px;
+        height: 4.5rem;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        margin: 0.8rem;
         button{
             border: none;
             background-color: $accent;
@@ -78,49 +74,11 @@ body{
   }
   
 }
-
 .tasks-list{
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-
-.task-element{
-    @include card;
-    background-color: $secondaryBackgroundDarken;
-    width: 100%;
-    align-items: center;
-    box-shadow: none;
-
-    h2{
-        padding-left: 1rem;
-        font-size: 1rem;
-
-    }
-    button{
-        background: none;
-        border: none;
-        padding: 0.8rem;
-        margin: 0.5rem;
-        .icon{
-            &:hover{
-                color: $accent;
-                cursor: pointer;
-            }
-        }
-    }
-}
-.buttons{
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-}
-
-.hide{
-    display: none;
 }
 
 

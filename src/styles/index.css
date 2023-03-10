@@ -78,44 +78,4 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.task-element {
-  background-color: #0A7373;
-  border-radius: 8px;
-  height: 4.5rem;
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  margin: 0.8rem;
-  background-color: #085c5c;
-  width: 100%;
-  align-items: center;
-  box-shadow: none;
-}
-.task-element h2 {
-  padding-left: 1rem;
-  font-size: 1rem;
-}
-.task-element button {
-  background: none;
-  border: none;
-  padding: 0.8rem;
-  margin: 0.5rem;
-}
-.task-element button .icon:hover {
-  color: #EDAA25;
-  cursor: pointer;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-}
-
-.hide {
-  display: none;
 }/*# sourceMappingURL=index.css.map */
