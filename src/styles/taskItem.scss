@@ -11,6 +11,18 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
 
+    input{
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 1rem;
+        font-weight: 400;
+        width: auto;
+        padding-left: 1rem;
+        padding-top: 1px;
+        font-family: 'Roboto', sans-serif;
+ 
+    }
     &:nth-child(odd){
         background-color: $accent;
         color: $primaryText;
@@ -21,6 +33,10 @@
                 color: $tertiary;
                 cursor: pointer;
             }
+        }
+        input{
+            color: $primaryText;
+            border-bottom: 1px solid $primaryText;
         }
     }
 
@@ -35,20 +51,12 @@
                 cursor: pointer;
             }
         }
+        input{
+            color: $stroke;
+            border-bottom: 1px solid $stroke;
+        }
     }
 
-    input{
-        outline: none;
-        border: none;
-        background: $secondaryAccent;
-        border-radius: 8px;
-        padding: 0.8rem;
-        color: $primaryText;
-        font-size: 1rem;
-        padding-left: 1rem;
-        font-weight: 400;
- 
-    }
     h2{
         padding-left: 1rem;
         font-size: 1rem;
@@ -78,10 +86,4 @@
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
-}
-input[type=checkbox]{
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    margin: 0.2rem;
 }

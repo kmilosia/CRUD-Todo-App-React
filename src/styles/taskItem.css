@@ -9,6 +9,17 @@
   align-items: center;
   font-family: "Roboto", sans-serif;
 }
+.task-element input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 400;
+  width: auto;
+  padding-left: 1rem;
+  padding-top: 1px;
+  font-family: "Roboto", sans-serif;
+}
 .task-element:nth-child(odd) {
   background-color: #ff8906;
   color: #fffffe;
@@ -19,6 +30,10 @@
 .task-element:nth-child(odd) .icon:hover {
   color: #e53170;
   cursor: pointer;
+}
+.task-element:nth-child(odd) input {
+  color: #fffffe;
+  border-bottom: 1px solid #fffffe;
 }
 .task-element:nth-child(even) {
   background-color: #fffffe;
@@ -31,16 +46,9 @@
   color: #e53170;
   cursor: pointer;
 }
-.task-element input {
-  outline: none;
-  border: none;
-  background: #f25f4c;
-  border-radius: 8px;
-  padding: 0.8rem;
-  color: #fffffe;
-  font-size: 1rem;
-  padding-left: 1rem;
-  font-weight: 400;
+.task-element:nth-child(even) input {
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 .task-element h2 {
   padding-left: 1rem;
@@ -72,11 +80,4 @@
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
-}
-
-input[type=checkbox] {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-  margin: 0.2rem;
 }/*# sourceMappingURL=taskItem.css.map */

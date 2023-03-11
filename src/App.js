@@ -19,6 +19,7 @@ function App() {
       dispatch(addTask({id: count + 1, text: text}));
       newTaskInput.current.value = null;
       setText(null);
+      newTaskInput.current.focus();
     }
   }
   return (
