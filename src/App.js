@@ -15,7 +15,7 @@ function App() {
     setText(event.target.value);
   }
   const handleAddButton = () => {
-    if(text != null && text != ""){
+    if(text !== null && text !== ""){
       dispatch(addTask({id: count + 1, text: text}));
       newTaskInput.current.value = null;
       setText(null);

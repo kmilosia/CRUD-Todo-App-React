@@ -25,13 +25,13 @@ function TaskItem(props) {
           <input className={isEdited ? '' : 'hide'} ref={editInput} type="text" value={newText} onChange={handleInputNewText}/>                          
           <div className="buttons">
           <button className={isEdited ? '' : 'hide'} onClick={() => {dispatch(updateTaskName({id: props.task.id, text: newText})); setIsEdited(!isEdited);}}>
-            <SaveAltIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+            <SaveAltIcon fontSize="small" className="icon"/>
           </button>
             <button onClick={() => {dispatch(deleteTask({id: props.task.id})); }}>
-              <DeleteIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+              <DeleteIcon fontSize="small" className="icon"/>
             </button>
             <button onClick={ handleEditButton }>
-              <EditIcon fontSize="small" className="icon" sx={{color:"white"}}/>
+              <EditIcon fontSize="small" className="icon"/>
             </button>
           </div>
         </div>

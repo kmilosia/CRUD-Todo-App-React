@@ -1,28 +1,47 @@
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/500.css';
 .task-element {
   border-radius: 8px;
   height: 4.5rem;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
-  padding-left: 1rem;
+  padding: 0.8rem;
   margin: 0.8rem;
-  background-color: #085c5c;
   width: 100%;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.task-element:nth-child(odd) {
+  background-color: #ff8906;
+  color: #fffffe;
+}
+.task-element:nth-child(odd) .icon {
+  color: #fffffe;
+}
+.task-element:nth-child(odd) .icon:hover {
+  color: #e53170;
+  cursor: pointer;
+}
+.task-element:nth-child(even) {
+  background-color: #fffffe;
+  color: #000;
+}
+.task-element:nth-child(even) .icon {
+  color: #ff8906;
+}
+.task-element:nth-child(even) .icon:hover {
+  color: #e53170;
+  cursor: pointer;
 }
 .task-element input {
   outline: none;
-  border: 3px solid #0A7373;
-  background: none;
+  border: none;
+  background: #f25f4c;
   border-radius: 8px;
-  padding: 0.5rem;
-  color: #f1f1f1;
+  padding: 0.8rem;
+  color: #fffffe;
   font-size: 1rem;
-  padding-left: 0.8rem;
+  padding-left: 1rem;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  width: 70%;
 }
 .task-element h2 {
   padding-left: 1rem;
@@ -34,10 +53,6 @@
   border: none;
   padding: 0.8rem;
   margin: 0.5rem;
-}
-.task-element button .icon:hover {
-  color: #EDAA25;
-  cursor: pointer;
 }
 
 .buttons {

@@ -1,31 +1,53 @@
-@import '../styles/variables';
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/500.css';
-
+@import './variables';
 
 .task-element{
     border-radius: 8px;
     height: 4.5rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.8rem;
     margin: 0.8rem;
-    background-color: $secondaryBackgroundDarken;
     width: 100%;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+
+    &:nth-child(odd){
+        background-color: $accent;
+        color: $primaryText;
+
+        .icon{
+            color: $primaryText;
+            &:hover{
+                color: $tertiary;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &:nth-child(even){
+        background-color: $secondaryBackground;
+        color: $stroke;
+
+        .icon{
+            color: $accent;
+            &:hover{
+                color: $tertiary;
+                cursor: pointer;
+            }
+        }
+    }
 
     input{
         outline: none;
-        border: 3px solid $secondaryBackground;
-        background: none;
+        border: none;
+        background: $secondaryAccent;
         border-radius: 8px;
-        padding: 0.5rem;
+        padding: 0.8rem;
         color: $primaryText;
         font-size: 1rem;
-        padding-left: 0.8rem;
+        padding-left: 1rem;
         font-weight: 400;
-        font-family: 'Roboto', sans-serif;
+        width: 70%;
  
     }
     h2{
@@ -38,13 +60,7 @@
         background: none;
         border: none;
         padding: 0.8rem;
-        margin: 0.5rem;
-        .icon{
-            &:hover{
-                color: $accent;
-                cursor: pointer;
-            }
-        }
+        margin: 0.5rem;       
     }
 }
 .buttons{

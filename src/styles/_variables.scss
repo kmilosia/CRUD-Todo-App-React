@@ -1,6 +1,14 @@
-$primaryBackground: #010221;
-$secondaryBackground: #0A7373;
-$secondaryBackgroundDarken: #085c5c;
-$accent: #EDAA25;
-$darkenAccent: #ed9625;
-$primaryText: #f1f1f1;
+$primaryBackground: #0f0e17;
+$secondaryBackground: #fffffe;
+$accent: #ff8906;
+$secondaryAccent: #f25f4c;
+$primaryText: #fffffe;
+$secondaryText: #a7a9be;
+$tertiary: #e53170;
+$stroke: #000;
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
