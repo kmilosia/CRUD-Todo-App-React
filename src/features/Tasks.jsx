@@ -17,7 +17,6 @@ export const taskSlice = createSlice({
         },
         deleteTask: (state, action) => {
             state.value = state.value.filter((task) => task.id !== action.payload.id);
-            state.count -= 1;
         },
         updateTaskName: (state, action) => {
             state.value.map((task) => {

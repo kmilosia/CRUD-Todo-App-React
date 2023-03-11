@@ -11,17 +11,21 @@ function TaskItem(props) {
     const dispatch = useDispatch();
     const [newText, setNewText] = useState(props.task.text);
     const [isEdited, setIsEdited] = useState(false);
+    const [checked, setChecked] = useState(false);
     const editInput = useRef(null);
     const handleInputNewText = (event) => {
         setNewText(event.target.value);
       }
-      const handleEditButton = () => {
+    const handleEditButton = () => {
         setIsEdited(!isEdited);
-      }
+    }
 
     return(
         <div className="task-element">
-          <h2 className={isEdited ? 'hide' : ''}>{props.task.text}</h2>
+          <div className='box'>
+          <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)}/>
+          <h2 className={`${isEdited ? 'hide' : ''} ${checked ? 'lined' : ''}`}>{props.task.text}</h2>
+          </div>
           <input className={isEdited ? '' : 'hide'} ref={editInput} type="text" value={newText} onChange={handleInputNewText}/>                          
           <div className="buttons">
           <button className={isEdited ? '' : 'hide'} onClick={() => {dispatch(updateTaskName({id: props.task.id, text: newText})); setIsEdited(!isEdited);}}>

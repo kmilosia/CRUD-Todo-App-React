@@ -47,7 +47,6 @@
         font-size: 1rem;
         padding-left: 1rem;
         font-weight: 400;
-        width: 70%;
  
     }
     h2{
@@ -71,4 +70,18 @@
 
 .hide{
     display: none;
+}
+.lined{
+    text-decoration: line-through;
+}
+.box{
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin: 0.2rem;
 }
