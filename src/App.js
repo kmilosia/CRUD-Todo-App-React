@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addTask } from "./features/Tasks";
 import AddRoundedIcon from '@mui/icons-material/AddRounded';
 
+
 function App() {
   const dispatch = useDispatch();
   const taskList = useSelector((state) => state.tasks.value);
@@ -27,7 +28,7 @@ function App() {
       <div className="heading">
         <h1>Todo List</h1>
         <div className="input-container">
-          <input autoFocus type="text" placeholder="Write your new task.." onChange={handleInputText} ref={newTaskInput}/>
+          <input spellCheck={false} autoFocus type="text" placeholder="Write your new task.." onChange={handleInputText} ref={newTaskInput}/>
           <button onClick={handleAddButton}><AddRoundedIcon fontSize="large" sx={{color: "white"}}/></button>
         </div>
       </div>

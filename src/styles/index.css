@@ -13,11 +13,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0f0e17;
-  color: #fffffe;
   height: auto;
   min-height: 100vh;
   justify-content: center;
+  background-color: #0f0e17;
+  color: #fffffe;
   padding: 2rem 0;
 }
 .app .heading {
@@ -31,12 +31,12 @@ body {
   font-weight: 400;
 }
 .app .heading .input-container {
-  background-color: #fffffe;
   border-radius: 8px;
   height: 4.5rem;
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
+  background-color: #fffffe;
   padding: 0.5rem;
   padding-left: 1rem;
   margin: 0.8rem;
@@ -57,11 +57,10 @@ body {
 .app .heading .input-container input[type=text] {
   outline: none;
   border: none;
-  background: none;
-  color: #000;
   font-size: 1.2rem;
   padding: 0.5rem 0.2rem;
   width: 80%;
+  background: none;
 }
 .app .heading .input-container input[type=text]::-moz-placeholder {
   color: #000;
@@ -76,5 +75,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 70%;
+}
+
+@media screen and (max-width: 740px) {
+  .app .heading .input-container {
+    width: 90%;
+  }
+  .tasks-list {
+    width: 100%;
+  }
 }/*# sourceMappingURL=index.css.map */

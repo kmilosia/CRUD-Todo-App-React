@@ -80,4 +80,28 @@
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 740px) {
+  .task-element {
+    width: 90%;
+    height: auto;
+  }
+  .task-element input {
+    width: 90%;
+  }
+  .task-element button {
+    padding: 0.2rem;
+    margin: 0.5rem;
+  }
+  .task-element h2 {
+    height: auto;
+    width: 90%;
+    overflow-wrap: break-word;
+  }
+  .box {
+    width: 60%;
+    padding: 0.5rem;
+    margin-left: 0.1rem;
+  }
 }/*# sourceMappingURL=taskItem.css.map */

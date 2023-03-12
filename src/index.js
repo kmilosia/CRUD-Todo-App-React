@@ -6,6 +6,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
 import tasksReducer from './features/Tasks';
 
+
 const store = configureStore({
   reducer: {
     tasks: tasksReducer

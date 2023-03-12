@@ -87,3 +87,29 @@
     align-items: center;
     margin-left: 0.5rem;
 }
+
+@media screen and (max-width: 740px){
+    .task-element{
+        width: 90%;
+        height: auto;
+
+        input{
+            width: 90%;
+     
+        }
+        button{
+            padding: 0.2rem;
+            margin: 0.5rem;
+        }
+        h2{
+            height: auto;
+            width: 90%;
+            overflow-wrap: break-word;
+        }
+    }
+    .box{
+        width: 60%;
+        padding: 0.5rem;
+        margin-left: 0.1rem;
+    }
+}

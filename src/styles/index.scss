@@ -11,11 +11,11 @@ body{
 }
 .app{
     @include flex-column-center;
-    background-color: $primaryBackground;
-    color: $primaryText;
     height: auto;
     min-height: 100vh;
     justify-content: center;
+    background-color: $primaryBackground;
+    color: $primaryText;
     padding: 2rem 0;
 
     .heading{
@@ -27,12 +27,12 @@ body{
         font-weight: 400;
     }
     .input-container{
-        background-color: $secondaryBackground;
         border-radius: 8px;
         height: 4.5rem;
-        width: 60%;
+        width: 70%;
         display: flex;
         justify-content: space-between;
+        background-color: $secondaryBackground;
         padding: 0.5rem;
         padding-left: 1rem;
         margin: 0.8rem;
@@ -55,11 +55,10 @@ body{
         input[type=text]{
             outline: none;
             border: none;
-            background: none;
-            color: $stroke;
             font-size: 1.2rem;
             padding: 0.5rem 0.2rem;
             width: 80%;
+            background: none;
 
             &::placeholder{
                 color: $stroke;
@@ -71,7 +70,20 @@ body{
 }
 .tasks-list{
     @include flex-column-center;
-    width: 60%;
+    width: 70%;
+}
+
+@media screen and (max-width: 740px) {
+    .app{
+        .heading{
+            .input-container{
+                width: 90%;
+            }
+        }
+    }
+    .tasks-list{
+        width: 100%;
+    }
 }
 
 
