@@ -3,4 +3,4 @@ Simple todo list web application created with create-react-app. Implemented basi
 ## Technologies:
 - React
 - SCSS
-
+-HTML/CSS
