@@ -1,3 +1,6 @@
-# TODO LIST
-Simple todo list react web application styled using SCSS.
+# Todo List React App
+Simple todo list web application created with create-react-app. Implemented basic CRUD operations.
+## Technologies:
+- React
+- SCSS
 
